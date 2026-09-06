@@ -1,0 +1,92 @@
+{
+  "achievements": [
+    {
+      "id": "ach_first_blood",
+      "title": "First Variable Awoken",
+      "description": "Declare your first C++ variable and pass your maiden challenge in Earth Prime.",
+      "category": "milestone",
+      "icon": "Zap",
+      "xpReward": 100,
+      "coinReward": 50,
+      "unlockedUsers": [
+        "usr_guardian_01",
+        "usr_binary_02",
+        "usr_cyber_03"
+      ]
+    },
+    {
+      "id": "ach_function_nexus",
+      "title": "Nexus Navigator",
+      "description": "Master parameter passing, return types, and multi-dimensional arrays.",
+      "category": "mastery",
+      "icon": "Cpu",
+      "xpReward": 250,
+      "coinReward": 100,
+      "unlockedUsers": [
+        "usr_binary_02",
+        "usr_cyber_03"
+      ]
+    },
+    {
+      "id": "ach_oop_architect",
+      "title": "Object Realm Architect",
+      "description": "Construct encapsulated C++ classes with constructors, destructors, and getters.",
+      "category": "oop",
+      "icon": "Box",
+      "xpReward": 350,
+      "coinReward": 150,
+      "unlockedUsers": [
+        "usr_binary_02",
+        "usr_cyber_03"
+      ]
+    },
+    {
+      "id": "ach_poly_champion",
+      "title": "Polymorph Sovereign",
+      "description": "Implement pure virtual functions and dynamic dispatch to resolve dimensional anomalies.",
+      "category": "oop",
+      "icon": "Sparkles",
+      "xpReward": 500,
+      "coinReward": 250,
+      "unlockedUsers": [
+        "usr_cyber_03"
+      ]
+    },
+    {
+      "id": "ach_pointer_slayer",
+      "title": "Dragon Leak Slayer",
+      "description": "Defeat the Memory Leak Dragon without a single dangling pointer or segment fault.",
+      "category": "combat",
+      "icon": "ShieldAlert",
+      "xpReward": 600,
+      "coinReward": 300,
+      "unlockedUsers": [
+        "usr_cyber_03"
+      ]
+    },
+    {
+      "id": "ach_stl_master",
+      "title": "STL Cosmos Commander",
+      "description": "Command std::vector, std::map, std::stack, and std::queue in high-speed combat.",
+      "category": "stl",
+      "icon": "Layers",
+      "xpReward": 750,
+      "coinReward": 400,
+      "unlockedUsers": [
+        "usr_cyber_03"
+      ]
+    },
+    {
+      "id": "ach_flawless_compiler",
+      "title": "Grand Core Restorer",
+      "description": "Restore all 8 Parallel Universes to 100% stability in the Core Compiler.",
+      "category": "legendary",
+      "icon": "Crown",
+      "xpReward": 1500,
+      "coinReward": 1000,
+      "unlockedUsers": [
+        "usr_cyber_03"
+      ]
+    }
+  ]
+}

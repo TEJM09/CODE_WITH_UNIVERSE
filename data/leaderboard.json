@@ -1,0 +1,64 @@
+{
+  "leaderboard": [
+    {
+      "rank": 1,
+      "userId": "usr_cyber_03",
+      "username": "CyberProgrammer",
+      "avatar": "Cyber Programmer",
+      "level": 12,
+      "xp": 8900,
+      "coins": 5200,
+      "restorationPercentage": 96,
+      "badge": "Grand Compiler Master",
+      "status": "online"
+    },
+    {
+      "rank": 2,
+      "userId": "usr_binary_02",
+      "username": "BinaryKnight",
+      "avatar": "Binary Knight",
+      "level": 7,
+      "xp": 3420,
+      "coins": 1850,
+      "restorationPercentage": 64,
+      "badge": "Polymorph Paladin",
+      "status": "online"
+    },
+    {
+      "rank": 3,
+      "userId": "usr_guardian_01",
+      "username": "CodeGuardian",
+      "avatar": "Code Wizard",
+      "level": 3,
+      "xp": 840,
+      "coins": 450,
+      "restorationPercentage": 28,
+      "badge": "Syntax Adept",
+      "status": "active"
+    },
+    {
+      "rank": 4,
+      "userId": "usr_system_04",
+      "username": "VectorValkyrie",
+      "avatar": "Space Explorer",
+      "level": 6,
+      "xp": 2980,
+      "coins": 1420,
+      "restorationPercentage": 52,
+      "badge": "STL Vanguard",
+      "status": "offline"
+    },
+    {
+      "rank": 5,
+      "userId": "usr_system_05",
+      "username": "MemoryMedic",
+      "avatar": "Robot Engineer",
+      "level": 5,
+      "xp": 2150,
+      "coins": 980,
+      "restorationPercentage": 40,
+      "badge": "Pointer Specialist",
+      "status": "offline"
+    }
+  ]
+}

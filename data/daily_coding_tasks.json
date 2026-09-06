@@ -1,0 +1,210 @@
+{
+  "tasks": [
+    {
+      "id": "dt_01",
+      "protocolCode": "PRT-0x1A",
+      "title": "Bitwise Parity & Power Verification",
+      "universeId": "world_1",
+      "universeName": "Earth Prime",
+      "topic": "Bitwise Logic & Bit Manipulation",
+      "difficulty": "Scout",
+      "story": "Corrupted binary telemetry is flooding Earth Prime power relays. You must write a routine to verify if incoming energy packets are exact powers of two using fast bitwise operations.",
+      "prompt": "Given an array of integers {4, 7, 16, 25, 64, 100}, print each number followed by 'POWER_OF_2' if it is a power of 2, or 'ODD_PACKET' otherwise. Each result on its own line.",
+      "starterCode": "#include <iostream>\n#include <vector>\n\nbool isPowerOfTwo(int n) {\n    // TODO: Use bitwise & logic: (n > 0) && ((n & (n - 1)) == 0)\n    return false;\n}\n\nint main() {\n    std::vector<int> packets = {4, 7, 16, 25, 64, 100};\n    for (int p : packets) {\n        if (isPowerOfTwo(p)) {\n            std::cout << p << \" POWER_OF_2\\n\";\n        } else {\n            std::cout << p << \" ODD_PACKET\\n\";\n        }\n    }\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <vector>\n\nbool isPowerOfTwo(int n) {\n    return (n > 0) && ((n & (n - 1)) == 0);\n}\n\nint main() {\n    std::vector<int> packets = {4, 7, 16, 25, 64, 100};\n    for (int p : packets) {\n        if (isPowerOfTwo(p)) {\n            std::cout << p << \" POWER_OF_2\\n\";\n        } else {\n            std::cout << p << \" ODD_PACKET\\n\";\n        }\n    }\n    return 0;\n}\n",
+      "expectedOutput": "4 POWER_OF_2\n7 ODD_PACKET\n16 POWER_OF_2\n25 ODD_PACKET\n64 POWER_OF_2\n100 ODD_PACKET",
+      "xpReward": 300,
+      "coinReward": 150,
+      "hints": [
+        "In binary, powers of 2 have only 1 bit set (e.g., 16 is 00010000).",
+        "n - 1 flips all bits up to the lowest set bit. So (n & (n - 1)) evaluates to 0 for powers of 2!"
+      ]
+    },
+    {
+      "id": "dt_02",
+      "protocolCode": "PRT-0x2B",
+      "title": "Stack Frame Recursion Echo",
+      "universeId": "world_2",
+      "universeName": "Function Nexus",
+      "topic": "Recursion & Call Stack Tracing",
+      "difficulty": "Vanguard",
+      "story": "The Function Nexus call-stack gateway has an echo loop. Transmit a recursive string inverter function to collapse stack overflow anomalies.",
+      "prompt": "Implement a recursive function 'void reverseEcho(const std::string& str, int index)' that prints the characters of the string 'NEXUS' in reverse order followed by a newline.",
+      "starterCode": "#include <iostream>\n#include <string>\n\nvoid reverseEcho(const std::string& str, int index) {\n    // TODO: Base case: if index < 0, return\n    // Print str[index], then recursively call reverseEcho with index - 1\n}\n\nint main() {\n    std::string word = \"NEXUS\";\n    reverseEcho(word, word.length() - 1);\n    std::cout << std::endl;\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <string>\n\nvoid reverseEcho(const std::string& str, int index) {\n    if (index < 0) return;\n    std::cout << str[index];\n    reverseEcho(str, index - 1);\n}\n\nint main() {\n    std::string word = \"NEXUS\";\n    reverseEcho(word, word.length() - 1);\n    std::cout << std::endl;\n    return 0;\n}\n",
+      "expectedOutput": "SUXEN",
+      "xpReward": 350,
+      "coinReward": 180,
+      "hints": [
+        "Start index at str.length() - 1.",
+        "Print str[index] directly without spaces.",
+        "Decrement index until it drops below 0."
+      ]
+    },
+    {
+      "id": "dt_03",
+      "protocolCode": "PRT-0x3C",
+      "title": "Shield Generator Encapsulation",
+      "universeId": "world_3",
+      "universeName": "Object Realm",
+      "topic": "C++ Classes & Data Encapsulation",
+      "difficulty": "Vanguard",
+      "story": "Build an encapsulated ShieldGenerator class with private integrity fields and public calibration methods to withstand malware intrusions.",
+      "prompt": "Create class ShieldGenerator with private int shieldHP = 100. Add public methods: void absorb(int dmg) and void boost(int heal) and int getIntegrity() const. Print initial integrity, integrity after 35 damage, and integrity after 15 boost.",
+      "starterCode": "#include <iostream>\n\nclass ShieldGenerator {\nprivate:\n    int shieldHP;\n\npublic:\n    ShieldGenerator(int initial) : shieldHP(initial) {}\n\n    void absorb(int dmg) {\n        // TODO: shieldHP -= dmg;\n    }\n\n    void boost(int heal) {\n        // TODO: shieldHP += heal;\n    }\n\n    int getIntegrity() const {\n        return shieldHP;\n    }\n};\n\nint main() {\n    ShieldGenerator gen(100);\n    std::cout << \"Init: \" << gen.getIntegrity() << \"\\n\";\n    gen.absorb(35);\n    std::cout << \"After Strike: \" << gen.getIntegrity() << \"\\n\";\n    gen.boost(15);\n    std::cout << \"After Boost: \" << gen.getIntegrity() << \"\\n\";\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n\nclass ShieldGenerator {\nprivate:\n    int shieldHP;\n\npublic:\n    ShieldGenerator(int initial) : shieldHP(initial) {}\n\n    void absorb(int dmg) {\n        shieldHP -= dmg;\n    }\n\n    void boost(int heal) {\n        shieldHP += heal;\n    }\n\n    int getIntegrity() const {\n        return shieldHP;\n    }\n};\n\nint main() {\n    ShieldGenerator gen(100);\n    std::cout << \"Init: \" << gen.getIntegrity() << \"\\n\";\n    gen.absorb(35);\n    std::cout << \"After Strike: \" << gen.getIntegrity() << \"\\n\";\n    gen.boost(15);\n    std::cout << \"After Boost: \" << gen.getIntegrity() << \"\\n\";\n    return 0;\n}\n",
+      "expectedOutput": "Init: 100\nAfter Strike: 65\nAfter Boost: 80",
+      "xpReward": 350,
+      "coinReward": 160,
+      "hints": [
+        "Encapsulation prevents outside access to shieldHP directly.",
+        "Implement absorb() to subtract damage and boost() to add energy."
+      ]
+    },
+    {
+      "id": "dt_04",
+      "protocolCode": "PRT-0x4D",
+      "title": "Polymorphic Drone Swarm Interface",
+      "universeId": "world_5",
+      "universeName": "Polymorphism City",
+      "topic": "Virtual Functions & Dynamic Dispatch",
+      "difficulty": "Elite",
+      "story": "Polymorphism City defensive turrets must fire via abstract base pointer interface so new drone variants can be deployed dynamically.",
+      "prompt": "Implement base class Drone with virtual void ping(). Derive ReconDrone and override ping() to print 'Recon Drone Scanning Area\\n'. In main, dispatch via Drone* pointer to display polymorphic dispatch.",
+      "starterCode": "#include <iostream>\n#include <vector>\n\nclass Drone {\npublic:\n    virtual void ping() {\n        std::cout << \"Drone Online\\n\";\n    }\n    virtual ~Drone() = default;\n};\n\nclass ReconDrone : public Drone {\npublic:\n    // TODO: Override ping() to print \"Recon Drone Scanning Area\\n\"\n};\n\nint main() {\n    Drone base;\n    ReconDrone recon;\n\n    Drone* d1 = &base;\n    Drone* d2 = &recon;\n\n    d1->ping();\n    d2->ping();\n\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <vector>\n\nclass Drone {\npublic:\n    virtual void ping() {\n        std::cout << \"Drone Online\\n\";\n    }\n    virtual ~Drone() = default;\n};\n\nclass ReconDrone : public Drone {\npublic:\n    void ping() override {\n        std::cout << \"Recon Drone Scanning Area\\n\";\n    }\n};\n\nint main() {\n    Drone base;\n    ReconDrone recon;\n\n    Drone* d1 = &base;\n    Drone* d2 = &recon;\n\n    d1->ping();\n    d2->ping();\n\n    return 0;\n}\n",
+      "expectedOutput": "Drone Online\nRecon Drone Scanning Area",
+      "xpReward": 450,
+      "coinReward": 220,
+      "hints": [
+        "Mark the overridden method with override keyword in ReconDrone.",
+        "The virtual table resolves the derived call at runtime through the pointer."
+      ]
+    },
+    {
+      "id": "dt_05",
+      "protocolCode": "PRT-0x5E",
+      "title": "Raw Pointer Memory Array Scan",
+      "universeId": "world_6",
+      "universeName": "Memory Dimension",
+      "topic": "Pointer Arithmetic & Memory Offsets",
+      "difficulty": "Elite",
+      "story": "A memory leak has fragmented sector 0x7FFE. Walk an integer array using pure pointer arithmetic without bracket indexing ([]) to sum safe sector addresses.",
+      "prompt": "Given array int sectors[] = {12, 24, 36, 48, 60}; calculate the sum of all elements using a pointer int* ptr = sectors and pointer increments ptr++. Print 'SUM: <sum>\\n'.",
+      "starterCode": "#include <iostream>\n\nint main() {\n    int sectors[] = {12, 24, 36, 48, 60};\n    int n = 5;\n    int sum = 0;\n\n    int* ptr = sectors;\n    // TODO: Loop n times, add *ptr to sum, and advance ptr++\n\n    std::cout << \"SUM: \" << sum << \"\\n\";\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n\nint main() {\n    int sectors[] = {12, 24, 36, 48, 60};\n    int n = 5;\n    int sum = 0;\n\n    int* ptr = sectors;\n    for (int i = 0; i < n; ++i) {\n        sum += *ptr;\n        ptr++;\n    }\n\n    std::cout << \"SUM: \" << sum << \"\\n\";\n    return 0;\n}\n",
+      "expectedOutput": "SUM: 180",
+      "xpReward": 400,
+      "coinReward": 200,
+      "hints": [
+        "Dereference with *ptr to retrieve the integer value.",
+        "Advance the address with ptr++.",
+        "The sum of 12 + 24 + 36 + 48 + 60 is 180."
+      ]
+    },
+    {
+      "id": "dt_06",
+      "protocolCode": "PRT-0x6F",
+      "title": "STL Vector Transformation",
+      "universeId": "world_7",
+      "universeName": "STL Galaxy",
+      "topic": "STL <vector> & Element Traversal",
+      "difficulty": "Vanguard",
+      "story": "The STL Galaxy hyperspace beacons are out of sync. Double each number in energy coordinate vector and print them separated by spaces.",
+      "prompt": "Given std::vector<int> vals = {3, 8, 12, 17, 20}; print each number multiplied by 2 separated by single spaces, ending with a newline.",
+      "starterCode": "#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> vals = {3, 8, 12, 17, 20};\n\n    // TODO: Print each element multiplied by 2 separated by spaces\n    for (size_t i = 0; i < vals.size(); ++i) {\n        std::cout << vals[i] * 2;\n        if (i + 1 < vals.size()) std::cout << \" \";\n    }\n    std::cout << \"\\n\";\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> vals = {3, 8, 12, 17, 20};\n\n    for (size_t i = 0; i < vals.size(); ++i) {\n        std::cout << vals[i] * 2;\n        if (i + 1 < vals.size()) std::cout << \" \";\n    }\n    std::cout << \"\\n\";\n    return 0;\n}\n",
+      "expectedOutput": "6 16 24 34 40",
+      "xpReward": 350,
+      "coinReward": 175,
+      "hints": [
+        "Multiply each element by 2.",
+        "Print with space delimiters: 6 16 24 34 40."
+      ]
+    },
+    {
+      "id": "dt_07",
+      "protocolCode": "PRT-0x7A",
+      "title": "STL Map Key Frequency Counter",
+      "universeId": "world_7",
+      "universeName": "STL Galaxy",
+      "topic": "std::map & Associative Containers",
+      "difficulty": "Legend",
+      "story": "Decode frequency of intercepted corrupted signal transmissions using std::map key-value mapping.",
+      "prompt": "Given vector of signal tags {'ALPHA', 'BETA', 'ALPHA', 'GAMMA', 'BETA', 'ALPHA'}, insert them into std::map<std::string, int> freq. Print each key and count in format '<KEY>: <COUNT>\\n' in alphabetical order.",
+      "starterCode": "#include <iostream>\n#include <string>\n#include <vector>\n#include <map>\n\nint main() {\n    std::vector<std::string> signals = {\"ALPHA\", \"BETA\", \"ALPHA\", \"GAMMA\", \"BETA\", \"ALPHA\"};\n    std::map<std::string, int> freq;\n\n    // TODO: Count occurrences in freq map\n\n    for (const auto& pair : freq) {\n        std::cout << pair.first << \": \" << pair.second << \"\\n\";\n    }\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <string>\n#include <vector>\n#include <map>\n\nint main() {\n    std::vector<std::string> signals = {\"ALPHA\", \"BETA\", \"ALPHA\", \"GAMMA\", \"BETA\", \"ALPHA\"};\n    std::map<std::string, int> freq;\n\n    for (const auto& s : signals) {\n        freq[s]++;\n    }\n\n    for (const auto& pair : freq) {\n        std::cout << pair.first << \": \" << pair.second << \"\\n\";\n    }\n    return 0;\n}\n",
+      "expectedOutput": "ALPHA: 3\nBETA: 2\nGAMMA: 1",
+      "xpReward": 500,
+      "coinReward": 250,
+      "hints": [
+        "std::map automatically sorts keys alphabetically.",
+        "Use freq[s]++ to increment each occurrence."
+      ]
+    },
+    {
+      "id": "dt_08",
+      "protocolCode": "PRT-0x8B",
+      "title": "Const-Correct Compiler Optimization",
+      "universeId": "world_8",
+      "universeName": "Core Compiler",
+      "topic": "Const References & Zero-Copy Calls",
+      "difficulty": "Legend",
+      "story": "Core Compiler -O3 optimization requires strictly const-correct references to prevent unnecessary memory copy overhead during high-speed parsing.",
+      "prompt": "Implement function void printReport(const std::string& label, const int& code) that outputs 'STATUS: [' << label << '] CODE: ' << code << '\\n'. Call with label 'CORE_STABLE' and code 200.",
+      "starterCode": "#include <iostream>\n#include <string>\n\n// TODO: Define printReport(const std::string& label, const int& code)\n\nint main() {\n    std::string status = \"CORE_STABLE\";\n    int code = 200;\n    printReport(status, code);\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <string>\n\nvoid printReport(const std::string& label, const int& code) {\n    std::cout << \"STATUS: [\" << label << \"] CODE: \" << code << \"\\n\";\n}\n\nint main() {\n    std::string status = \"CORE_STABLE\";\n    int code = 200;\n    printReport(status, code);\n    return 0;\n}\n",
+      "expectedOutput": "STATUS: [CORE_STABLE] CODE: 200",
+      "xpReward": 500,
+      "coinReward": 260,
+      "hints": [
+        "Pass strings as const std::string& to eliminate heap copies.",
+        "Format output strictly to match STATUS: [CORE_STABLE] CODE: 200."
+      ]
+    },
+    {
+      "id": "dt_09",
+      "protocolCode": "PRT-0x9A",
+      "title": "Standard Stream Summation Protocol",
+      "universeId": "world_1",
+      "universeName": "Binary Nexus",
+      "topic": "Standard Input (std::cin) & Stream Reading",
+      "difficulty": "Scout",
+      "story": "The network data stream injects packets through standard input. Read the count N and sum each packet value.",
+      "prompt": "Read integer N from std::cin, then read N numbers from std::cin and calculate their sum. Output 'SUM: ' followed by the total sum.",
+      "starterCode": "#include <iostream>\n\nint main() {\n    int n;\n    // Read N, then loop to read N integers and compute sum\n    // Output format: SUM: <value>\n    \n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n\nint main() {\n    int n;\n    if (std::cin >> n) {\n        long long sum = 0;\n        for (int i = 0; i < n; ++i) {\n            long long val;\n            std::cin >> val;\n            sum += val;\n        }\n        std::cout << \"SUM: \" << sum << \"\\n\";\n    }\n    return 0;\n}\n",
+      "sampleInput": "4\n10 20 30 40\n",
+      "expectedOutput": "SUM: 100",
+      "xpReward": 250,
+      "coinReward": 120,
+      "hints": [
+        "Use std::cin >> n to read the total number of items.",
+        "Use a loop reading each next number into a variable with std::cin >> val.",
+        "Print output as: std::cout << \"SUM: \" << sum << \"\\n\";"
+      ]
+    },
+    {
+      "id": "dt_10",
+      "protocolCode": "PRT-0x9B",
+      "title": "Stream Token Frequency Counter",
+      "universeId": "world_2",
+      "universeName": "Array Asteroid",
+      "topic": "std::cin Token Streams",
+      "difficulty": "Vanguard",
+      "story": "Scan an incoming data stream of string tokens and tally all occurrences of the target identifier 'cpp'.",
+      "prompt": "Read words from standard input until end-of-stream (cin >> word) and output 'COUNT(cpp): ' followed by the number of times 'cpp' appeared.",
+      "starterCode": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string word;\n    int count = 0;\n    // TODO: Read words from std::cin and count occurrences of \"cpp\"\n    \n    std::cout << \"COUNT(cpp): \" << count << \"\\n\";\n    return 0;\n}\n",
+      "solutionSample": "#include <iostream>\n#include <string>\n\nint main() {\n    std::string word;\n    int count = 0;\n    while (std::cin >> word) {\n        if (word == \"cpp\") {\n            count++;\n        }\n    }\n    std::cout << \"COUNT(cpp): \" << count << \"\\n\";\n    return 0;\n}\n",
+      "sampleInput": "cpp codeverse cpp nexus guardian cpp\n",
+      "expectedOutput": "COUNT(cpp): 3",
+      "xpReward": 350,
+      "coinReward": 180,
+      "hints": [
+        "Use while (std::cin >> word) to parse whitespace-separated tokens until EOF.",
+        "Check if (word == \"cpp\") and increment your counter.",
+        "Print output strictly matching: COUNT(cpp): <count>"
+      ]
+    }
+  ]
+}

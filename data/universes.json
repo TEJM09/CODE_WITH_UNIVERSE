@@ -1,0 +1,772 @@
+{
+  "universes": [
+    {
+      "id": "world_1",
+      "name": "Earth Prime",
+      "subtitle": "The Genesis of Logic",
+      "topic": "Variables, Data Types & Operators",
+      "order": 1,
+      "color": "#00E5FF",
+      "accentColor": "#00B4D8",
+      "icon": "Globe",
+      "bgImage": "earth_prime",
+      "description": "The foundation world of the CodeVerse. Arithmetic engines are freezing and primitive data types are collapsing into corrupt bits.",
+      "levels": [
+        {
+          "id": "w1_l1",
+          "title": "Variable Awakening",
+          "universeId": "world_1",
+          "order": 1,
+          "type": "mission",
+          "story": "The core energy matrix of Earth Prime has lost its calibrated metrics. You must declare the correct basic types and calculate the total defense output.",
+          "prompt": "Declare an `int energy = 100;`, a `double multiplier = 1.75;`, and calculate `double totalEnergy = energy * multiplier;`. Print `totalEnergy` to `cout`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // 1. Declare energy (int = 100)\n    // 2. Declare multiplier (double = 1.75)\n    // 3. Compute totalEnergy and print it\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int energy = 100;\n    double multiplier = 1.75;\n    double totalEnergy = energy * multiplier;\n    cout << totalEnergy << endl;\n    return 0;\n}",
+          "expectedOutput": "175",
+          "hints": ["Remember that double handles decimal points.", "Use std::cout << totalEnergy;"],
+          "enemy": {
+            "name": "Bit Glitcher",
+            "type": "minion",
+            "hp": 100,
+            "maxHp": 100,
+            "attack": 15,
+            "element": "Digital",
+            "avatar": "👾"
+          },
+          "rewards": {
+            "xp": 100,
+            "coins": 50,
+            "item": "Bit Capacitor"
+          }
+        },
+        {
+          "id": "w1_l2",
+          "title": "Arithmetic Resonance",
+          "universeId": "world_1",
+          "order": 2,
+          "type": "mission",
+          "story": "The magnetic relays require a harmonic average calculation. Given numbers, compute sum and remainder to stabilize the frequency.",
+          "prompt": "Write a program that takes two integers `a = 45` and `b = 7`, computes quotient `a / b` and remainder `a % b`, and prints them space-separated: `cout << quotient << \" \" << remainder << endl;`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 45;\n    int b = 7;\n    // Calculate quotient and remainder\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 45;\n    int b = 7;\n    int quotient = a / b;\n    int remainder = a % b;\n    cout << quotient << \" \" << remainder << endl;\n    return 0;\n}",
+          "expectedOutput": "6 3",
+          "hints": ["Integer division truncates towards zero.", "% operator computes the modulus remainder."],
+          "enemy": {
+            "name": "Overflow Sprite",
+            "type": "minion",
+            "hp": 150,
+            "maxHp": 150,
+            "attack": 20,
+            "element": "Math Anomaly",
+            "avatar": "⚡"
+          },
+          "rewards": {
+            "xp": 150,
+            "coins": 75,
+            "item": "Modulo Core"
+          }
+        },
+        {
+          "id": "w1_l3",
+          "title": "Syntax Void Specter",
+          "universeId": "world_1",
+          "order": 3,
+          "type": "boss",
+          "story": "The Syntax Void Specter reigns over the corrupted planetary node. It corrupts logical expressions and flips boolean states. Defeat it by writing a boolean security validator!",
+          "prompt": "Write a program with `int shields = 85;` and `bool hasKey = true;`. If `shields >= 80 && hasKey`, print `ACCESS GRANTED: 100% SECURE`. Otherwise print `SECURITY BREACH`.",
+          "starterCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    int shields = 85;\n    bool hasKey = true;\n    // Verify security condition and print output\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int shields = 85;\n    bool hasKey = true;\n    if (shields >= 80 && hasKey) {\n        cout << \"ACCESS GRANTED: 100% SECURE\" << endl;\n    } else {\n        cout << \"SECURITY BREACH\" << endl;\n    }\n    return 0;\n}",
+          "expectedOutput": "ACCESS GRANTED: 100% SECURE",
+          "hints": ["Use && for logical AND.", "Be exact with the output string."],
+          "enemy": {
+            "name": "Syntax Void Specter",
+            "type": "boss",
+            "hp": 300,
+            "maxHp": 300,
+            "attack": 35,
+            "element": "Void Logic",
+            "avatar": "👹",
+            "special": "Boolean Negation Pulse"
+          },
+          "rewards": {
+            "xp": 300,
+            "coins": 150,
+            "item": "Earth Prime Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_2",
+      "name": "Function Nexus",
+      "subtitle": "The Grid of Subroutines",
+      "topic": "Functions, Arrays & Strings",
+      "order": 2,
+      "color": "#7C3AED",
+      "accentColor": "#9333EA",
+      "icon": "Cpu",
+      "bgImage": "function_nexus",
+      "description": "A sprawling neon cyber-city where fractured functions cannot return their values and arrays leak across sector boundaries.",
+      "levels": [
+        {
+          "id": "w2_l1",
+          "title": "Modular Pulse Function",
+          "universeId": "world_2",
+          "order": 1,
+          "type": "mission",
+          "story": "The power conduits in sector 4 need modular power amplification. Implement a standalone function `int amplify(int base, int factor)` that returns `base * factor + 10`.",
+          "prompt": "Create function `int amplify(int base, int factor)` returning `base * factor + 10`. In `main()`, call `amplify(12, 4)` and print the result.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Define amplify function here\n\nint main() {\n    int result = amplify(12, 4);\n    cout << result << endl;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nint amplify(int base, int factor) {\n    return base * factor + 10;\n}\n\nint main() {\n    int result = amplify(12, 4);\n    cout << result << endl;\n    return 0;\n}",
+          "expectedOutput": "58",
+          "hints": ["Ensure the function signature is placed before main.", "Return base * factor + 10."],
+          "enemy": {
+            "name": "Recursion Wraith",
+            "type": "minion",
+            "hp": 180,
+            "maxHp": 180,
+            "attack": 25,
+            "element": "Cyber Stack",
+            "avatar": "🤖"
+          },
+          "rewards": {
+            "xp": 180,
+            "coins": 90,
+            "item": "Subroutine Chip"
+          }
+        },
+        {
+          "id": "w2_l2",
+          "title": "Array Barrier Matrix",
+          "universeId": "world_2",
+          "order": 2,
+          "type": "mission",
+          "story": "The firewall contains a sequence of energy spikes. Write an algorithm to find the maximum value in an array `int spikes[5] = {14, 82, 33, 99, 45};` and print it.",
+          "prompt": "Iterate through the array `int spikes[5] = {14, 82, 33, 99, 45};`, determine the maximum number, and print `Max Spike: ` followed by the value.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int spikes[5] = {14, 82, 33, 99, 45};\n    // Find max value and print: Max Spike: 99\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int spikes[5] = {14, 82, 33, 99, 45};\n    int maxVal = spikes[0];\n    for(int i = 1; i < 5; i++) {\n        if (spikes[i] > maxVal) maxVal = spikes[i];\n    }\n    cout << \"Max Spike: \" << maxVal << endl;\n    return 0;\n}",
+          "expectedOutput": "Max Spike: 99",
+          "hints": ["Initialize max with spikes[0] then iterate through 1..4.", "Format must be 'Max Spike: 99'."],
+          "enemy": {
+            "name": "Index Out-Of-Bounds Fiend",
+            "type": "minion",
+            "hp": 220,
+            "maxHp": 220,
+            "attack": 30,
+            "element": "Memory Rift",
+            "avatar": "👾"
+          },
+          "rewards": {
+            "xp": 220,
+            "coins": 110,
+            "item": "Array Boundary Ward"
+          }
+        },
+        {
+          "id": "w2_l3",
+          "title": "Stack Overflow Golem",
+          "universeId": "world_2",
+          "order": 3,
+          "type": "boss",
+          "story": "The Stack Overflow Golem is dumping infinite frames onto the CPU cache! Defeat it by implementing a recursive factorial calculation with a secure base case.",
+          "prompt": "Write a recursive function `long long factorial(int n)`. If `n <= 1` return 1; else return `n * factorial(n - 1)`. In `main()`, print `factorial(6)`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Implement recursive factorial\n\nint main() {\n    cout << factorial(6) << endl;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nlong long factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    cout << factorial(6) << endl;\n    return 0;\n}",
+          "expectedOutput": "720",
+          "hints": ["Base condition stops the infinite loop.", "6! = 720."],
+          "enemy": {
+            "name": "Stack Overflow Golem",
+            "type": "boss",
+            "hp": 450,
+            "maxHp": 450,
+            "attack": 45,
+            "element": "Call Stack",
+            "avatar": "🗿",
+            "special": "Infinite Frame Blast"
+          },
+          "rewards": {
+            "xp": 400,
+            "coins": 200,
+            "item": "Function Nexus Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_3",
+      "name": "Object Realm",
+      "subtitle": "The Monoliths of OOP",
+      "topic": "Classes, Objects & Constructors",
+      "order": 3,
+      "color": "#00FFB2",
+      "accentColor": "#10B981",
+      "icon": "Box",
+      "bgImage": "object_realm",
+      "description": "Gigantic crystalline constructs hover over vast architectural planes. Raw blueprints need encapsulation and parameterized instantiation.",
+      "levels": [
+        {
+          "id": "w3_l1",
+          "title": "Class Guardian Blueprint",
+          "universeId": "world_3",
+          "order": 1,
+          "type": "mission",
+          "story": "Create the structural class for an orbital guardian unit. Encapsulate name and shield power.",
+          "prompt": "Define a class `Guardian` with private `string name` and `int power`. Provide a constructor `Guardian(string n, int p)` and a public method `void display()` that prints `Guardian: [name] | Power: [power]`. In `main()`, create `Guardian g(\"Aegis\", 250);` and call `g.display();`.",
+          "starterCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Define class Guardian\n\nint main() {\n    Guardian g(\"Aegis\", 250);\n    g.display();\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Guardian {\nprivate:\n    string name;\n    int power;\npublic:\n    Guardian(string n, int p) : name(n), power(p) {}\n    void display() {\n        cout << \"Guardian: \" << name << \" | Power: \" << power << endl;\n    }\n};\n\nint main() {\n    Guardian g(\"Aegis\", 250);\n    g.display();\n    return 0;\n}",
+          "expectedOutput": "Guardian: Aegis | Power: 250",
+          "hints": ["Use private access specifier for attributes.", "Remember constructor initialization list or body."],
+          "enemy": {
+            "name": "Uninstantiated Entity",
+            "type": "minion",
+            "hp": 260,
+            "maxHp": 260,
+            "attack": 35,
+            "element": "Void Struct",
+            "avatar": "💠"
+          },
+          "rewards": {
+            "xp": 260,
+            "coins": 130,
+            "item": "Encapsulation Seal"
+          }
+        },
+        {
+          "id": "w3_l2",
+          "title": "Destructor Protocol",
+          "universeId": "world_3",
+          "order": 2,
+          "type": "mission",
+          "story": "When objects go out of scope, automatic cleanup is vital to prevent realm corrosion.",
+          "prompt": "Create class `Resource` with a constructor that prints `Resource Allocated` and a destructor `~Resource()` that prints `Resource Deallocated`. In `main()`, create a block `{ Resource r; }` so both messages print in order.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Implement class Resource with Constructor and Destructor\n\nint main() {\n    {\n        Resource r;\n    }\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass Resource {\npublic:\n    Resource() {\n        cout << \"Resource Allocated\" << endl;\n    }\n    ~Resource() {\n        cout << \"Resource Deallocated\" << endl;\n    }\n};\n\nint main() {\n    {\n        Resource r;\n    }\n    return 0;\n}",
+          "expectedOutput": "Resource Allocated\nResource Deallocated",
+          "hints": ["The tilde ~ denotes the destructor.", "When the scope block closes, the destructor fires automatically."],
+          "enemy": {
+            "name": "Resource Leaker",
+            "type": "minion",
+            "hp": 300,
+            "maxHp": 300,
+            "attack": 40,
+            "element": "Scope Warp",
+            "avatar": "👻"
+          },
+          "rewards": {
+            "xp": 300,
+            "coins": 150,
+            "item": "RAII Crystal"
+          }
+        },
+        {
+          "id": "w3_l3",
+          "title": "Rogue Object Colossus",
+          "universeId": "world_3",
+          "order": 3,
+          "type": "boss",
+          "story": "The Rogue Object Colossus was instantiated with corrupted parameters! Defeat it by writing a class with copy constructor and operator overload for object power merging.",
+          "prompt": "Create class `PowerCore` with `int energy;`. Implement a constructor `PowerCore(int e)` and overload `PowerCore operator+(const PowerCore& other)` returning a new PowerCore with summed energy. In `main()`, add two cores `PowerCore a(150); PowerCore b(200); PowerCore c = a + b;` and print `c.energy`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Complete class PowerCore with operator+\n\nint main() {\n    PowerCore a(150);\n    PowerCore b(200);\n    PowerCore c = a + b;\n    cout << \"Fused Energy: \" << c.getEnergy() << endl;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass PowerCore {\nprivate:\n    int energy;\npublic:\n    PowerCore(int e = 0) : energy(e) {}\n    PowerCore operator+(const PowerCore& other) const {\n        return PowerCore(this->energy + other.energy);\n    }\n    int getEnergy() const { return energy; }\n};\n\nint main() {\n    PowerCore a(150);\n    PowerCore b(200);\n    PowerCore c = a + b;\n    cout << \"Fused Energy: \" << c.getEnergy() << endl;\n    return 0;\n}",
+          "expectedOutput": "Fused Energy: 350",
+          "hints": ["Return a new PowerCore from operator+.", "Provide a getter getEnergy() const."],
+          "enemy": {
+            "name": "Rogue Object Colossus",
+            "type": "boss",
+            "hp": 600,
+            "maxHp": 600,
+            "attack": 55,
+            "element": "Polymorphic Colossus",
+            "avatar": "🗿",
+            "special": "Corrupted Instantiation Smash"
+          },
+          "rewards": {
+            "xp": 500,
+            "coins": 250,
+            "item": "Object Realm Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_4",
+      "name": "Inheritance Kingdom",
+      "subtitle": "Lineage of Code",
+      "topic": "Inheritance & Encapsulation",
+      "order": 4,
+      "color": "#FFD166",
+      "accentColor": "#F59E0B",
+      "icon": "Shield",
+      "bgImage": "inheritance_kingdom",
+      "description": "An ancient citadel of code castles where base classes pass down sacred attributes to derived warrior subclasses.",
+      "levels": [
+        {
+          "id": "w4_l1",
+          "title": "Ancestral Derivation",
+          "universeId": "world_4",
+          "order": 1,
+          "type": "mission",
+          "story": "Derive a specialized battle unit `Knight` from base class `Warrior`.",
+          "prompt": "Create base class `Warrior` with `protected: int basePower = 50;`. Derive `class Knight : public Warrior` with public method `void attack()` printing `Knight strikes with ` followed by `(basePower * 2)` and ` DMG!`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Base class Warrior\n// Derived class Knight\n\nint main() {\n    Knight k;\n    k.attack();\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass Warrior {\nprotected:\n    int basePower = 50;\n};\n\nclass Knight : public Warrior {\npublic:\n    void attack() {\n        cout << \"Knight strikes with \" << (basePower * 2) << \" DMG!\" << endl;\n    }\n};\n\nint main() {\n    Knight k;\n    k.attack();\n    return 0;\n}",
+          "expectedOutput": "Knight strikes with 100 DMG!",
+          "hints": ["Protected members are accessible by derived classes.", "Public inheritance syntax is: class Derived : public Base."],
+          "enemy": {
+            "name": "Shadow Heir",
+            "type": "minion",
+            "hp": 340,
+            "maxHp": 340,
+            "attack": 45,
+            "element": "Inherited Dark",
+            "avatar": "⚔️"
+          },
+          "rewards": {
+            "xp": 350,
+            "coins": 175,
+            "item": "Lineage Sigil"
+          }
+        },
+        {
+          "id": "w4_l2",
+          "title": "Multi-Level Hierarchy",
+          "universeId": "world_4",
+          "order": 2,
+          "type": "mission",
+          "story": "Construct a 3-tier hierarchy: `Device` -> `Computer` -> `QuantumServer` with constructor chaining.",
+          "prompt": "Create `Device(string id)` -> `Computer(string id, int ram)` -> `QuantumServer(string id, int ram, int qubits)`. Method `void specs()` prints `Server: [id], RAM: [ram]GB, Qubits: [qubits]`.",
+          "starterCode": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Implement Device -> Computer -> QuantumServer\n\nint main() {\n    QuantumServer qs(\"QS-9000\", 128, 64);\n    qs.specs();\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Device {\nprotected:\n    string id;\npublic:\n    Device(string i) : id(i) {}\n};\n\nclass Computer : public Device {\nprotected:\n    int ram;\npublic:\n    Computer(string i, int r) : Device(i), ram(r) {}\n};\n\nclass QuantumServer : public Computer {\nprivate:\n    int qubits;\npublic:\n    QuantumServer(string i, int r, int q) : Computer(i, r), qubits(q) {}\n    void specs() {\n        cout << \"Server: \" << id << \", RAM: \" << ram << \"GB, Qubits: \" << qubits << endl;\n    }\n};\n\nint main() {\n    QuantumServer qs(\"QS-9000\", 128, 64);\n    qs.specs();\n    return 0;\n}",
+          "expectedOutput": "Server: QS-9000, RAM: 128GB, Qubits: 64",
+          "hints": ["Pass parameters up the inheritance chain in constructors.", "Device(i) -> Computer(i, r)."],
+          "enemy": {
+            "name": "Inheritance Corruptor",
+            "type": "minion",
+            "hp": 400,
+            "maxHp": 400,
+            "attack": 50,
+            "element": "Hierarchy Breach",
+            "avatar": "🛡️"
+          },
+          "rewards": {
+            "xp": 400,
+            "coins": 200,
+            "item": "Diamond Aegis"
+          }
+        },
+        {
+          "id": "w4_l3",
+          "title": "Diamond Anomaly Chimera",
+          "universeId": "world_4",
+          "order": 3,
+          "type": "boss",
+          "story": "The infamous Diamond Problem Anomaly has spawned a multi-parent hybrid beast! Resolve ambiguity using virtual inheritance.",
+          "prompt": "Create base class `Node` with `int val = 42;`. Create `virtual public Node` for `LeftNode` and `RightNode`. Derive `class DiamondNode : public LeftNode, public RightNode`. In `main()`, create `DiamondNode dn;` and print `dn.val` without compile ambiguity.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Solve Diamond Problem using virtual inheritance\n\nint main() {\n    DiamondNode dn;\n    cout << \"Resolved Diamond Node Val: \" << dn.val << endl;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass Node {\npublic:\n    int val = 42;\n};\n\nclass LeftNode : virtual public Node {};\nclass RightNode : virtual public Node {};\n\nclass DiamondNode : public LeftNode, public RightNode {};\n\nint main() {\n    DiamondNode dn;\n    cout << \"Resolved Diamond Node Val: \" << dn.val << endl;\n    return 0;\n}",
+          "expectedOutput": "Resolved Diamond Node Val: 42",
+          "hints": ["Use 'virtual public Node' on both LeftNode and RightNode.", "Virtual base classes share a single instance."],
+          "enemy": {
+            "name": "Diamond Anomaly Chimera",
+            "type": "boss",
+            "hp": 750,
+            "maxHp": 750,
+            "attack": 65,
+            "element": "Diamond Multiple Inheritance",
+            "avatar": "🐉",
+            "special": "Ambiguous Resolution Blast"
+          },
+          "rewards": {
+            "xp": 600,
+            "coins": 300,
+            "item": "Inheritance Kingdom Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_5",
+      "name": "Polymorphism City",
+      "subtitle": "The Metamorphic Metropolis",
+      "topic": "Virtual Functions & Polymorphism",
+      "order": 5,
+      "color": "#EC4899",
+      "accentColor": "#DB2777",
+      "icon": "Sparkles",
+      "bgImage": "polymorphism_city",
+      "description": "A shifting cyber-realm where data takes multiple shapes at runtime through virtual method tables (vtable) and dynamic dispatch.",
+      "levels": [
+        {
+          "id": "w5_l1",
+          "title": "Virtual Spell Weaver",
+          "universeId": "world_5",
+          "order": 1,
+          "type": "mission",
+          "story": "The dynamic shield must dispatch attacks polymorphically based on actual runtime object type.",
+          "prompt": "Create base class `Spell` with `virtual void cast() { cout << \"Generic Spell\"; }`. Derive `FireSpell` overriding `cast()` to print `Flamestrike Burst!`. In `main()`, instantiate `Spell* s = new FireSpell(); s->cast(); delete s;`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Create Spell and FireSpell\n\nint main() {\n    Spell* s = new FireSpell();\n    s->cast();\n    delete s;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass Spell {\npublic:\n    virtual void cast() {\n        cout << \"Generic Spell\" << endl;\n    }\n    virtual ~Spell() {}\n};\n\nclass FireSpell : public Spell {\npublic:\n    void cast() override {\n        cout << \"Flamestrike Burst!\" << endl;\n    }\n};\n\nint main() {\n    Spell* s = new FireSpell();\n    s->cast();\n    delete s;\n    return 0;\n}",
+          "expectedOutput": "Flamestrike Burst!",
+          "hints": ["Use the virtual keyword in the base class.", "Override keyword is best practice in derived class."],
+          "enemy": {
+            "name": "Static Binder",
+            "type": "minion",
+            "hp": 450,
+            "maxHp": 450,
+            "attack": 55,
+            "element": "Early Binding Stasis",
+            "avatar": "🔮"
+          },
+          "rewards": {
+            "xp": 450,
+            "coins": 225,
+            "item": "VTable Catalyst"
+          }
+        },
+        {
+          "id": "w5_l2",
+          "title": "Pure Virtual Contract",
+          "universeId": "world_5",
+          "order": 2,
+          "type": "mission",
+          "story": "The dimensional portal interface is abstract. All portals must define `virtual void activate() = 0;`.",
+          "prompt": "Create abstract class `Portal` with pure virtual method `virtual void activate() = 0;`. Implement derived class `HyperlanePortal` printing `Hyperlane Jump Active: Sector 7`. Test via base pointer.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Define abstract Portal and derived HyperlanePortal\n\nint main() {\n    Portal* p = new HyperlanePortal();\n    p->activate();\n    delete p;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass Portal {\npublic:\n    virtual void activate() = 0;\n    virtual ~Portal() {}\n};\n\nclass HyperlanePortal : public Portal {\npublic:\n    void activate() override {\n        cout << \"Hyperlane Jump Active: Sector 7\" << endl;\n    }\n};\n\nint main() {\n    Portal* p = new HyperlanePortal();\n    p->activate();\n    delete p;\n    return 0;\n}",
+          "expectedOutput": "Hyperlane Jump Active: Sector 7",
+          "hints": ["= 0 makes the function pure virtual and class abstract.", "Concrete class must override pure virtual functions."],
+          "enemy": {
+            "name": "Interface Violator",
+            "type": "minion",
+            "hp": 520,
+            "maxHp": 520,
+            "attack": 60,
+            "element": "Abstract Chaos",
+            "avatar": "🌀"
+          },
+          "rewards": {
+            "xp": 500,
+            "coins": 250,
+            "item": "Abstract Prism"
+          }
+        },
+        {
+          "id": "w5_l3",
+          "title": "The Ambiguity Sovereign",
+          "universeId": "world_5",
+          "order": 3,
+          "type": "boss",
+          "story": "The Ambiguity Sovereign shapeshifts between multiple runtime forms. Use an array of polymorphic base pointers to execute a coordinated combo!",
+          "prompt": "Create base class `Hero` with `virtual void battleAction() = 0;`. Create `Mage` printing `Arcane Nova` and `Warrior` printing `Whirlwind Slash`. In `main()`, store pointers to both in an array `Hero* team[2]` and invoke `battleAction()` for each.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Complete Polymorphic Hero array\n\nint main() {\n    Hero* team[2] = { new Mage(), new Warrior() };\n    for(int i = 0; i < 2; i++) {\n        team[i]->battleAction();\n        delete team[i];\n    }\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nclass Hero {\npublic:\n    virtual void battleAction() = 0;\n    virtual ~Hero() {}\n};\n\nclass Mage : public Hero {\npublic:\n    void battleAction() override {\n        cout << \"Arcane Nova\" << endl;\n    }\n};\n\nclass Warrior : public Hero {\npublic:\n    void battleAction() override {\n        cout << \"Whirlwind Slash\" << endl;\n    }\n};\n\nint main() {\n    Hero* team[2] = { new Mage(), new Warrior() };\n    for(int i = 0; i < 2; i++) {\n        team[i]->battleAction();\n        delete team[i];\n    }\n    return 0;\n}",
+          "expectedOutput": "Arcane Nova\nWhirlwind Slash",
+          "hints": ["Dynamic dispatch resolves each derived implementation at runtime.", "Clean up with delete."],
+          "enemy": {
+            "name": "The Ambiguity Sovereign",
+            "type": "boss",
+            "hp": 900,
+            "maxHp": 900,
+            "attack": 75,
+            "element": "Dynamic Polymorph",
+            "avatar": "👑",
+            "special": "Runtime Rebinding Ray"
+          },
+          "rewards": {
+            "xp": 750,
+            "coins": 375,
+            "item": "Polymorphism City Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_6",
+      "name": "Memory Dimension",
+      "subtitle": "The Heap & Pointer Abyss",
+      "topic": "Pointers, Dynamic Memory & References",
+      "order": 6,
+      "color": "#3B82F6",
+      "accentColor": "#2563EB",
+      "icon": "Layers",
+      "bgImage": "memory_dimension",
+      "description": "A dark quantum void where physical addresses, heap blocks, dereferencing stars, and dangling pointers collide.",
+      "levels": [
+        {
+          "id": "w6_l1",
+          "title": "Address of Power",
+          "universeId": "world_6",
+          "order": 1,
+          "type": "mission",
+          "story": "Target the memory address directly using pointer dereferencing to multiply the plasma cannon charge.",
+          "prompt": "Create a function `void chargeCannon(int* plasmaPtr)` that modifies the value pointed to by multiplying it by 3. In `main()`, declare `int plasma = 40;`, call `chargeCannon(&plasma);`, and print `plasma`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Implement chargeCannon with pointer\n\nint main() {\n    int plasma = 40;\n    chargeCannon(&plasma);\n    cout << \"Charged Plasma: \" << plasma << endl;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nvoid chargeCannon(int* plasmaPtr) {\n    if (plasmaPtr) {\n        *plasmaPtr = (*plasmaPtr) * 3;\n    }\n}\n\nint main() {\n    int plasma = 40;\n    chargeCannon(&plasma);\n    cout << \"Charged Plasma: \" << plasma << endl;\n    return 0;\n}",
+          "expectedOutput": "Charged Plasma: 120",
+          "hints": ["Use *plasmaPtr to dereference and assign.", "Pass address using &plasma."],
+          "enemy": {
+            "name": "Null Pointer Wraith",
+            "type": "minion",
+            "hp": 550,
+            "maxHp": 550,
+            "attack": 65,
+            "element": "Segmentation Fault",
+            "avatar": "💀"
+          },
+          "rewards": {
+            "xp": 550,
+            "coins": 275,
+            "item": "Pointer Compass"
+          }
+        },
+        {
+          "id": "w6_l2",
+          "title": "Dynamic Heap Array",
+          "universeId": "world_6",
+          "order": 2,
+          "type": "mission",
+          "story": "Allocate a dynamic memory buffer on the heap using `new[]`, populate it, compute its sum, and cleanly `delete[]` it.",
+          "prompt": "Allocate `int* buffer = new int[4];`. Assign values `10, 20, 30, 40`. Calculate the sum, deallocate with `delete[] buffer;`, and print `Heap Buffer Sum: ` followed by the sum.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Allocate dynamic array of 4 ints\n    // Sum elements, delete array, print sum\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int* buffer = new int[4]{ 10, 20, 30, 40 };\n    int sum = 0;\n    for(int i = 0; i < 4; i++) {\n        sum += buffer[i];\n    }\n    delete[] buffer;\n    cout << \"Heap Buffer Sum: \" << sum << endl;\n    return 0;\n}",
+          "expectedOutput": "Heap Buffer Sum: 100",
+          "hints": ["Always pair new[] with delete[] to prevent memory leaks.", "Sum is 10+20+30+40=100."],
+          "enemy": {
+            "name": "Heap Corruptor",
+            "type": "minion",
+            "hp": 620,
+            "maxHp": 620,
+            "attack": 70,
+            "element": "Dangling Pointer",
+            "avatar": "⚡"
+          },
+          "rewards": {
+            "xp": 600,
+            "coins": 300,
+            "item": "Smart Pointer Core"
+          }
+        },
+        {
+          "id": "w6_l3",
+          "title": "The Memory Leak Dragon",
+          "universeId": "world_6",
+          "order": 3,
+          "type": "boss",
+          "story": "The Memory Leak Dragon hoards gigabytes of orphaned heap blocks. Slay the dragon by writing a memory-safe Linked List Node with explicit destructor deallocation!",
+          "prompt": "Create a `struct Node { int data; Node* next; Node(int d) : data(d), next(nullptr) {} };`. Build a 2-node chain (values 50 -> 100). Print `Node 1: 50 -> Node 2: 100`. Deallocate both nodes safely.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Define struct Node\n\nint main() {\n    // Build chain, print 'Node 1: 50 -> Node 2: 100', deallocate\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\nstruct Node {\n    int data;\n    Node* next;\n    Node(int d) : data(d), next(nullptr) {}\n};\n\nint main() {\n    Node* head = new Node(50);\n    head->next = new Node(100);\n    cout << \"Node 1: \" << head->data << \" -> Node 2: \" << head->next->data << endl;\n    delete head->next;\n    delete head;\n    return 0;\n}",
+          "expectedOutput": "Node 1: 50 -> Node 2: 100",
+          "hints": ["Connect head->next = new Node(100);", "Delete tail node first, then head."],
+          "enemy": {
+            "name": "The Memory Leak Dragon",
+            "type": "boss",
+            "hp": 1100,
+            "maxHp": 1100,
+            "attack": 90,
+            "element": "Heap Catastrophe",
+            "avatar": "🐉",
+            "special": "Massive Page Fault Breath"
+          },
+          "rewards": {
+            "xp": 900,
+            "coins": 450,
+            "item": "Memory Dimension Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_7",
+      "name": "STL Galaxy",
+      "subtitle": "The Standard Template Cosmos",
+      "topic": "Vector, Map, Stack, Queue & Algorithms",
+      "order": 7,
+      "color": "#10B981",
+      "accentColor": "#059669",
+      "icon": "Database",
+      "bgImage": "stl_galaxy",
+      "description": "An infinite constellation governed by the Standard Template Library: dynamic vectors, hash maps, FIFO queues, and LIFO stacks.",
+      "levels": [
+        {
+          "id": "w7_l1",
+          "title": "Vector Thrusters & Sort",
+          "universeId": "world_7",
+          "order": 1,
+          "type": "mission",
+          "story": "Calibrate the spacecraft vector array by pushing speeds and sorting them in ascending order with `std::sort`.",
+          "prompt": "Create `vector<int> speeds = {450, 120, 890, 310};`. Push `600` into the vector. Use `sort(speeds.begin(), speeds.end());`. Print elements space-separated on one line.",
+          "starterCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    // Create vector, push 600, sort, print\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> speeds = {450, 120, 890, 310};\n    speeds.push_back(600);\n    sort(speeds.begin(), speeds.end());\n    for(size_t i = 0; i < speeds.size(); i++) {\n        cout << speeds[i] << (i + 1 < speeds.size() ? \" \" : \"\");\n    }\n    cout << endl;\n    return 0;\n}",
+          "expectedOutput": "120 310 450 600 890",
+          "hints": ["Use speeds.push_back(600);", "#include <algorithm> contains std::sort."],
+          "enemy": {
+            "name": "Unsorted Phantom",
+            "type": "minion",
+            "hp": 700,
+            "maxHp": 700,
+            "attack": 80,
+            "element": "Disorder Vector",
+            "avatar": "🌌"
+          },
+          "rewards": {
+            "xp": 700,
+            "coins": 350,
+            "item": "STL Vector Matrix"
+          }
+        },
+        {
+          "id": "w7_l2",
+          "title": "Map Dimension Registry",
+          "universeId": "world_7",
+          "order": 2,
+          "type": "mission",
+          "story": "The dimension router maps universe IDs to planetary core frequencies using `std::map`.",
+          "prompt": "Create `map<string, int> planetCores;`. Insert `{\"Earth\", 100}`, `{\"Nexus\", 250}`, `{\"Cosmos\", 500}`. Lookup and print `planetCores[\"Cosmos\"]` in format: `Cosmos Core Frequency: 500`.",
+          "starterCode": "#include <iostream>\n#include <map>\n#include <string>\nusing namespace std;\n\nint main() {\n    // Map planet names to core frequencies and print Cosmos\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <map>\n#include <string>\nusing namespace std;\n\nint main() {\n    map<string, int> planetCores;\n    planetCores[\"Earth\"] = 100;\n    planetCores[\"Nexus\"] = 250;\n    planetCores[\"Cosmos\"] = 500;\n    cout << \"Cosmos Core Frequency: \" << planetCores[\"Cosmos\"] << endl;\n    return 0;\n}",
+          "expectedOutput": "Cosmos Core Frequency: 500",
+          "hints": ["Use operator[] or insert for std::map.", "Key is string, value is int."],
+          "enemy": {
+            "name": "Key Collision Fiend",
+            "type": "minion",
+            "hp": 780,
+            "maxHp": 780,
+            "attack": 85,
+            "element": "Hash Anomaly",
+            "avatar": "💠"
+          },
+          "rewards": {
+            "xp": 750,
+            "coins": 375,
+            "item": "Red-Black Tree Seed"
+          }
+        },
+        {
+          "id": "w7_l3",
+          "title": "Unbounded Queue Hydra",
+          "universeId": "world_7",
+          "order": 3,
+          "type": "boss",
+          "story": "The Unbounded Queue Hydra floods the universe with a massive queue of asynchronous attacks! Process and exhaust its queue using `std::queue` FIFO discipline.",
+          "prompt": "Create `queue<string> hydraHeads;`. Push `\"Fire Head\"`, `\"Ice Head\"`, `\"Toxic Head\"`. While not empty, pop and print each head: `Defeated: [head]`. Finally print `Hydra Queue Cleared!`.",
+          "starterCode": "#include <iostream>\n#include <queue>\n#include <string>\nusing namespace std;\n\nint main() {\n    // Process queue of hydra heads\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <queue>\n#include <string>\nusing namespace std;\n\nint main() {\n    queue<string> hydraHeads;\n    hydraHeads.push(\"Fire Head\");\n    hydraHeads.push(\"Ice Head\");\n    hydraHeads.push(\"Toxic Head\");\n    while(!hydraHeads.empty()) {\n        cout << \"Defeated: \" << hydraHeads.front() << endl;\n        hydraHeads.pop();\n    }\n    cout << \"Hydra Queue Cleared!\" << endl;\n    return 0;\n}",
+          "expectedOutput": "Defeated: Fire Head\nDefeated: Ice Head\nDefeated: Toxic Head\nHydra Queue Cleared!",
+          "hints": ["Use front() to peek and pop() to remove.", "Loop condition is while(!hydraHeads.empty())."],
+          "enemy": {
+            "name": "Unbounded Queue Hydra",
+            "type": "boss",
+            "hp": 1350,
+            "maxHp": 1350,
+            "attack": 105,
+            "element": "FIFO Multi-Head",
+            "avatar": "🐉",
+            "special": "Buffer Overflow Torrent"
+          },
+          "rewards": {
+            "xp": 1100,
+            "coins": 550,
+            "item": "STL Galaxy Star Gem"
+          }
+        }
+      ]
+    },
+    {
+      "id": "world_8",
+      "name": "Core Compiler",
+      "subtitle": "The Singularity of All Code",
+      "topic": "Grand Synthesis: Templates, Exceptions & Full OOP",
+      "order": 8,
+      "color": "#FF007F",
+      "accentColor": "#F43F5E",
+      "icon": "Terminal",
+      "bgImage": "core_compiler",
+      "description": "The epicenter of the entire CodeVerse. The Corrupted Null Root threatens to collapse all universes into undefined behavior.",
+      "levels": [
+        {
+          "id": "w8_l1",
+          "title": "Generic Template Reactor",
+          "universeId": "world_8",
+          "order": 1,
+          "type": "mission",
+          "story": "Forge a universal generic template function `template <typename T> T maxEnergy(T a, T b)` that works across all dimensional particle types.",
+          "prompt": "Create template function `template <typename T> T maxEnergy(T a, T b)` returning the maximum. Test in `main()` with `maxEnergy<int>(150, 320)` and `maxEnergy<double>(4.5, 2.1)`. Print `Int Max: 320 | Double Max: 4.5`.",
+          "starterCode": "#include <iostream>\nusing namespace std;\n\n// Define template function maxEnergy\n\nint main() {\n    cout << \"Int Max: \" << maxEnergy<int>(150, 320) \n         << \" | Double Max: \" << maxEnergy<double>(4.5, 2.1) << endl;\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\nusing namespace std;\n\ntemplate <typename T>\nT maxEnergy(T a, T b) {\n    return (a > b) ? a : b;\n}\n\nint main() {\n    cout << \"Int Max: \" << maxEnergy<int>(150, 320) \n         << \" | Double Max: \" << maxEnergy<double>(4.5, 2.1) << endl;\n    return 0;\n}",
+          "expectedOutput": "Int Max: 320 | Double Max: 4.5",
+          "hints": ["Use template <typename T>.", "T can be any comparable type."],
+          "enemy": {
+            "name": "Template Specialization Anomaly",
+            "type": "minion",
+            "hp": 900,
+            "maxHp": 900,
+            "attack": 95,
+            "element": "Generic Flux",
+            "avatar": "💠"
+          },
+          "rewards": {
+            "xp": 950,
+            "coins": 475,
+            "item": "Generic Template Core"
+          }
+        },
+        {
+          "id": "w8_l2",
+          "title": "Exception Containment Vault",
+          "universeId": "world_8",
+          "order": 2,
+          "type": "mission",
+          "story": "Capture runtime division by zero anomalies with structured C++ `try`, `throw`, and `catch` blocks.",
+          "prompt": "Write a function `double safeDivide(double num, double den)` that throws `runtime_error(\"Division by zero detected!\")` if `den == 0`. In `main()`, wrap a call `safeDivide(100, 0)` in a try-catch block and print `Caught Exception: ` followed by `e.what()`.",
+          "starterCode": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\n// Implement safeDivide and try-catch in main\n\nint main() {\n    try {\n        safeDivide(100, 0);\n    } catch (const exception& e) {\n        cout << \"Caught Exception: \" << e.what() << endl;\n    }\n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\ndouble safeDivide(double num, double den) {\n    if (den == 0) {\n        throw runtime_error(\"Division by zero detected!\");\n    }\n    return num / den;\n}\n\nint main() {\n    try {\n        safeDivide(100, 0);\n    } catch (const exception& e) {\n        cout << \"Caught Exception: \" << e.what() << endl;\n    }\n    return 0;\n}",
+          "expectedOutput": "Caught Exception: Division by zero detected!",
+          "hints": ["Use throw runtime_error(\"...\"); from <stdexcept>.", "Catch by const std::exception& e."],
+          "enemy": {
+            "name": "Fatal Crash Daemon",
+            "type": "minion",
+            "hp": 1050,
+            "maxHp": 1050,
+            "attack": 110,
+            "element": "SIGSEGV / Undefined Behavior",
+            "avatar": "⚠️"
+          },
+          "rewards": {
+            "xp": 1000,
+            "coins": 500,
+            "item": "Exception Barrier"
+          }
+        },
+        {
+          "id": "w8_l3",
+          "title": "The Corrupted Null Root",
+          "universeId": "world_8",
+          "order": 3,
+          "type": "boss",
+          "story": "The Corrupted Null Root sits at the core of reality. Combine Classes, Inheritance, Polymorphism, Vectors, and Pointers into the Master Universe Restorer to purge corruption forever!",
+          "prompt": "Create an abstract class `UniverseModule` with `virtual string restore() = 0;`. Derive `MemoryCore` (returns `\"Memory: Stable\"`) and `LogicCore` (returns `\"Logic: Purified\"`). In `main()`, store pointers in `vector<UniverseModule*> system;`, iterate and print each result, and finally print `THE CODEVERSE IS RESTORED 100%!`.",
+          "starterCode": "#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\n// Implement full restoration architecture\n\nint main() {\n    // Build system vector, iterate, restore, and celebrate\n    \n    return 0;\n}",
+          "solutionSample": "#include <iostream>\n#include <vector>\n#include <string>\nusing namespace std;\n\nclass UniverseModule {\npublic:\n    virtual string restore() = 0;\n    virtual ~UniverseModule() {}\n};\n\nclass MemoryCore : public UniverseModule {\npublic:\n    string restore() override { return \"Memory: Stable\"; }\n};\n\nclass LogicCore : public UniverseModule {\npublic:\n    string restore() override { return \"Logic: Purified\"; }\n};\n\nint main() {\n    vector<UniverseModule*> system;\n    system.push_back(new MemoryCore());\n    system.push_back(new LogicCore());\n    for(auto mod : system) {\n        cout << mod->restore() << endl;\n        delete mod;\n    }\n    cout << \"THE CODEVERSE IS RESTORED 100%!\" << endl;\n    return 0;\n}",
+          "expectedOutput": "Memory: Stable\nLogic: Purified\nTHE CODEVERSE IS RESTORED 100%!",
+          "hints": ["Derive both classes from UniverseModule with override restore().", "Print each module's restore() output then the victory banner."],
+          "enemy": {
+            "name": "The Corrupted Null Root",
+            "type": "boss",
+            "hp": 2000,
+            "maxHp": 2000,
+            "attack": 140,
+            "element": "Universal Chaos",
+            "avatar": "👁️‍🗨️",
+            "special": "Catastrophic Undefined Behavior"
+          },
+          "rewards": {
+            "xp": 2500,
+            "coins": 1500,
+            "item": "CodeVerse Supreme Crown"
+          }
+        }
+      ]
+    }
+  ]
+}

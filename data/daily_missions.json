@@ -1,0 +1,34 @@
+{
+  "dailyMissions": [
+    {
+      "id": "dm_01",
+      "title": "Variable Synchronization",
+      "description": "Complete any 2 C++ missions in Earth Prime or Function Nexus.",
+      "target": 2,
+      "progress": 1,
+      "xpReward": 150,
+      "coinReward": 80,
+      "completed": false
+    },
+    {
+      "id": "dm_02",
+      "title": "Compiler Practice Run",
+      "description": "Compile and run code in the C++ Practice Sandbox at least once.",
+      "target": 1,
+      "progress": 0,
+      "xpReward": 100,
+      "coinReward": 50,
+      "completed": false
+    },
+    {
+      "id": "dm_03",
+      "title": "Boss Encounter",
+      "description": "Engage any universe Boss and deal at least 300 damage.",
+      "target": 300,
+      "progress": 150,
+      "xpReward": 250,
+      "coinReward": 120,
+      "completed": false
+    }
+  ]
+}

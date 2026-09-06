@@ -1,0 +1,70 @@
+{
+  "progress": {
+    "usr_guardian_01": {
+      "userId": "usr_guardian_01",
+      "level": 3,
+      "xp": 840,
+      "xpToNextLevel": 1200,
+      "coins": 450,
+      "lives": 5,
+      "maxLives": 5,
+      "currentUniverseId": "world_1",
+      "completedUniverses": [],
+      "unlockedUniverses": ["world_1", "world_2"],
+      "completedLevels": ["w1_l1", "w1_l2"],
+      "restorationPercentage": 28,
+      "stats": {
+        "challengesSolved": 12,
+        "bossesDefeated": 1,
+        "accuracyRate": 92,
+        "streakDays": 4,
+        "codeLinesWritten": 348
+      },
+      "lastActive": "2026-08-31T19:40:00Z"
+    },
+    "usr_binary_02": {
+      "userId": "usr_binary_02",
+      "level": 7,
+      "xp": 3420,
+      "xpToNextLevel": 4000,
+      "coins": 1850,
+      "lives": 5,
+      "maxLives": 5,
+      "currentUniverseId": "world_4",
+      "completedUniverses": ["world_1", "world_2", "world_3"],
+      "unlockedUniverses": ["world_1", "world_2", "world_3", "world_4"],
+      "completedLevels": ["w1_l1", "w1_l2", "w1_l3", "w2_l1", "w2_l2", "w2_l3", "w3_l1", "w3_l2", "w3_l3"],
+      "restorationPercentage": 64,
+      "stats": {
+        "challengesSolved": 29,
+        "bossesDefeated": 3,
+        "accuracyRate": 95,
+        "streakDays": 9,
+        "codeLinesWritten": 920
+      },
+      "lastActive": "2026-08-31T18:00:00Z"
+    },
+    "usr_cyber_03": {
+      "userId": "usr_cyber_03",
+      "level": 12,
+      "xp": 8900,
+      "xpToNextLevel": 10000,
+      "coins": 5200,
+      "lives": 5,
+      "maxLives": 5,
+      "currentUniverseId": "world_8",
+      "completedUniverses": ["world_1", "world_2", "world_3", "world_4", "world_5", "world_6", "world_7"],
+      "unlockedUniverses": ["world_1", "world_2", "world_3", "world_4", "world_5", "world_6", "world_7", "world_8"],
+      "completedLevels": ["w1_l1", "w1_l2", "w1_l3", "w2_l1", "w2_l2", "w2_l3", "w3_l1", "w3_l2", "w3_l3", "w4_l1", "w4_l2", "w4_l3", "w5_l1", "w5_l2", "w5_l3", "w6_l1", "w6_l2", "w6_l3", "w7_l1", "w7_l2", "w7_l3"],
+      "restorationPercentage": 96,
+      "stats": {
+        "challengesSolved": 48,
+        "bossesDefeated": 7,
+        "accuracyRate": 98,
+        "streakDays": 18,
+        "codeLinesWritten": 2150
+      },
+      "lastActive": "2026-08-31T12:00:00Z"
+    }
+  }
+}

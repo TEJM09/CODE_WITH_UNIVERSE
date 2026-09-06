@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #00E5FF;
+  --secondary: #7C3AED;
+  --accent: #00FFB2;
+  --bg: #070B14;
+  --card: #111827;
+  --danger: #FF4D6D;
+  --gold: #FFD166;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #070B14;
+    color: #F8FAFC;
+  }
+  
+  h1, h2, h3, .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Atmospheric / Immersive Media Theme Utilities */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.glass-panel-subtle {
+  background: rgba(11, 17, 32, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(31, 41, 55, 0.7);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+.neon-glow-emerald {
+  box-shadow: 0 0 15px rgba(0, 255, 178, 0.4);
+}
+
+.neon-glow-gold {
+  box-shadow: 0 0 15px rgba(255, 209, 102, 0.4);
+}
+
+.planet {
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.planet-unlocked {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.5), inset 0 0 20px rgba(0, 229, 255, 0.3);
+  border: 2px solid var(--primary);
+}
+
+.planet-locked {
+  opacity: 0.4;
+  border: 2px dashed #4B5563;
+}
+
+.planet-active {
+  box-shadow: 0 0 40px rgba(0, 255, 178, 0.6), inset 0 0 30px rgba(0, 255, 178, 0.4);
+  border: 2px solid var(--accent);
+}
+
+.star-bg {
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Ambient World & Sector Visual Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinSlowReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.05); }
+}
+
+@keyframes laserSweep {
+  0% { transform: translateY(-100%); opacity: 0; }
+  30% { opacity: 0.8; }
+  70% { opacity: 0.8; }
+  100% { transform: translateY(200%); opacity: 0; }
+}
+
+@keyframes beamScanX {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 0.9; }
+  100% { transform: translateX(200%); opacity: 0; }
+}
+
+@keyframes lightningFlicker {
+  0%, 100% { opacity: 0.4; }
+  15% { opacity: 0.95; }
+  30% { opacity: 0.3; }
+  55% { opacity: 0.85; }
+  70% { opacity: 0.2; }
+  85% { opacity: 1; }
+}
+
+@keyframes sapPulse {
+  0%, 100% { stroke-dashoffset: 0; opacity: 0.4; }
+  50% { stroke-dashoffset: -30; opacity: 0.9; }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spinSlowReverse 25s linear infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3.5s ease-in-out infinite;
+}
+
+.animate-laser-sweep {
+  animation: laserSweep 3s ease-in-out infinite;
+}
+
+.animate-beam-scan-x {
+  animation: beamScanX 4s ease-in-out infinite;
+}
+
+.animate-lightning-flicker {
+  animation: lightningFlicker 2.5s infinite;
+}
+
+.animate-sap-pulse {
+  animation: sapPulse 3s linear infinite;
+}

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "usr_guardian_01",
+      "username": "CodeGuardian",
+      "email": "guardian@codewithuniverse.dev",
+      "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "avatar": "Code Wizard",
+      "createdAt": "2026-08-30T10:00:00Z"
+    },
+    {
+      "id": "usr_binary_02",
+      "username": "BinaryKnight",
+      "email": "binary@codewithuniverse.dev",
+      "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "avatar": "Binary Knight",
+      "createdAt": "2026-08-29T14:30:00Z"
+    },
+    {
+      "id": "usr_cyber_03",
+      "username": "CyberProgrammer",
+      "email": "cyber@codewithuniverse.dev",
+      "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "avatar": "Cyber Programmer",
+      "createdAt": "2026-08-28T09:15:00Z"
+    }
+  ]
+}

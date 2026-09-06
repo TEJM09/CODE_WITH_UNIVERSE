@@ -1,0 +1,32 @@
+{
+  "records": {
+    "usr_cyber_03": {
+      "date": "2026-09-06",
+      "taskIds": [
+        "dt_01",
+        "dt_05",
+        "dt_04"
+      ],
+      "completedIds": []
+    },
+    "usr_alpha_1": {
+      "date": "2026-09-06",
+      "taskIds": [
+        "dt_01"
+      ],
+      "completedIds": [
+        "dt_01"
+      ]
+    },
+    "usr_test_cin": {
+      "date": "2026-09-06",
+      "taskIds": [
+        "dt_09"
+      ],
+      "completedIds": [
+        "dt_09",
+        "dt_10"
+      ]
+    }
+  }
+}

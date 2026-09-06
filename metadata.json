@@ -1,0 +1,6 @@
+{
+  "name": "CodeWithUniverse",
+  "description": "A Gamified Parallel Universe for Interactive C++ Learning with real C++ backend engine and dark futuristic gameplay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
